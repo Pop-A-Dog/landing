@@ -1,0 +1,178 @@
+#signup {
+  background-color: $primary-color;
+  background-image: linear-gradient(
+    135deg,
+    $primary-color 0%,
+    $secondary-color 100%
+  );
+  color: $white-color;
+  height: 100%;
+  border-top: 0px;
+  
+  // -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+  // clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+  // padding-bottom: 10%;
+
+  @include respond(tab-land) {
+    height: 100%;
+    -webkit-clip-path: none;
+    clip-path: none;
+  }
+
+  .signup-wrapper {
+    @include respond(phone) {
+      // padding-bottom: 5rem;
+    }
+
+    &__image {
+      display: flex;
+      height: 100%;
+      align-items: center;
+      justify-content: center;
+
+      @include respond(tab-port) {
+        padding-bottom: 6.4rem;
+      }
+      @include respond(tab-land) {
+        height: 100%;
+      }
+    }
+
+    &__info {
+      display: flex;
+      height: 100%;
+      justify-content: center;
+      flex-direction: column;
+
+      @include respond(phone) {
+        align-items: center;
+      }
+
+      &-text {
+        text-align: center;
+        padding-right: 20px;
+        padding-left: 20px;
+
+        @include respond(tab-port) {
+          font-size: 1.5rem;
+          text-align: center;
+        }
+        @include respond(phone) {
+          font-size: 1.6rem;
+          text-align: center;
+        }
+
+        &--important {
+          background: darken($secondary-color, 1%);
+          display: inline-block;
+          font-style: italic;
+          padding: 0 0.3rem;
+          margin: 0.3rem 0;
+          line-height: 1.6;
+
+          @include respond(phone) {
+            display: inline;
+            margin: 0;
+            padding: 0;
+            background: transparent;
+            font-style: normal;
+          }
+        }
+      }
+    }
+  }
+}
+
+//** variables
+$background: #f5f6fa;
+$text: #9c9c9c;
+$input-bg-color: #fff;
+$input-text-color: #a3a3a3;
+$button-bg-color: #F3BF64;
+$button-text-color: #fff;
+
+//** root
+:root {
+	background: $background;
+	color: $text;
+	font: 1rem "PT Sans", sans-serif;
+}
+
+
+
+a {
+	color: inherit;
+	
+	&:hover {
+		color: $button-bg-color;
+	}
+}
+
+//** helper
+.container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+  
+  
+}
+
+.uppercase {
+	text-transform: uppercase;
+}
+
+//** button
+.btn {
+	display: inline-block;
+	background: transparent;
+	color: inherit;
+	font: inherit;
+	border: 0;
+	outline: 0;
+	padding: 0;
+	transition: all 200ms ease-in;
+	cursor: pointer;
+	
+	&--primary {
+		background: $button-bg-color;
+		color: $button-text-color;
+		box-shadow: 0 0 10px 2px rgba(0, 0, 0, .1);
+		border-radius: 10px;
+		padding: 12px 36px;
+		
+		&:hover {
+			background: darken($button-bg-color, 4%);
+		}
+		
+		&:active {
+			background: $button-bg-color;
+			box-shadow: inset 0 0 10px 2px rgba(0, 0, 0, .2);
+		}
+	}
+	
+  @include respond(phone) {
+    &--inside {
+      margin-left: 0px !important;
+    }  }
+	&--inside {
+		margin-left: -96px;
+	}
+}
+
+//** form
+.form {	
+  &__field {
+    margin-top: 50px;
+    margin-bottom: 50px;
+		width: 300px;
+		background: #fff;
+    border-radius: 10px;
+		color: $input-text-color;
+		font: inherit;
+		box-shadow: 0 6px 10px 0 rgba(0, 0, 0 , .1);
+		border: 0;
+		outline: 0;
+		padding: 22px 18px;
+	}
+}
