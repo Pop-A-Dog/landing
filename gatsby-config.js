@@ -1,4 +1,5 @@
 module.exports = {
+  pathPrefix: '/landing',
   plugins: [
     `gatsby-plugin-sass`,
     `gatsby-plugin-react-helmet`,

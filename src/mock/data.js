@@ -68,12 +68,12 @@ export const footerData = {
     {
       id: nanoid(),
       name: 'facebook',
-      url: 'https://www.facebook.com/popadog',
+      url: 'https://www.facebook.com/popadoguk',
     },
     {
       id: nanoid(),
       name: 'instagram',
-      url: 'https://www.instagram.com/popadog',
+      url: 'https://www.instagram.com/popadoguk',
     },
   ],
 };

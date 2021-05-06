@@ -27,7 +27,7 @@ const Footer = () => {
               );
             })}
         </div>
-        <p className="footer__text">© {new Date().getFullYear()} - Pop A Dog - London, UK</p>
+        <p className="footer__text">© {new Date().getFullYear()} - Popadog - London, UK</p>
       </Container>
     </footer>
   );
